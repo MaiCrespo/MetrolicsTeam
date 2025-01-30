@@ -81,11 +81,11 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+    Author's custom styles
    ========================================================================== */
 
 /* ==========================================================================
-   Helper classes
+    Helper classes
    ========================================================================== */
 
 /*
@@ -162,9 +162,9 @@ textarea {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
+    EXAMPLE Media Queries for Responsive Design.
+    These examples override the primary ('mobile first') styles.
+    Modify as content requires.
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
@@ -179,9 +179,9 @@ textarea {
 }
 
 /* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
+    Print styles.
+    Inlined to avoid the additional HTTP request:
+    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
 @media print {
