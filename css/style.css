@@ -245,3 +245,92 @@ textarea {
   }
 }
 
+
+/* Header and Navigation Styles */
+.page-menu {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-menu--tabs {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo styles */
+.buttons--top-left-logo {
+
+}
+
+.buttons--top-left-logo img {
+  height: 30px;
+  width: auto;
+}
+
+/* Navigation buttons container */
+.button-group {
+  display: flex;
+  align-items: stretch; 
+  font-size: 0; 
+}
+
+.button {
+  display: inline-flex; 
+  font-size: 16px; 
+  font-family: "Ubuntu";
+}
+
+.button a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.button a:hover {
+  opacity: 0.9;
+}
+
+
+.green {
+  background-color: #25C389;
+}
+
+.yellow {
+  background-color: #FFB901;
+}
+
+.red {
+  background-color: #DE6262;
+}
+
+.light-blue {
+  background-color: #19B2DE;
+}
+
+.dark-blue {
+  background-color: #265787;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+  .page-menu--tabs {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .buttons {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .button a {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
