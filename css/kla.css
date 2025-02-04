@@ -1,0 +1,24 @@
+/* BASE: Define Variables */
+:root {
+    --font-family: 'Ubuntu', sans-serif;
+    --font-subheading: 'Myriad Pro', sans-serif;
+    --font-size-header: 28px;
+    --font-size-subheading: 18px;
+    --font-size-content-heading: 16px;
+    --font-size-body: 11px;
+    --font-size-month: 8px;
+    
+
+     /* Colors */
+  --color-primary: #ffffff;
+  --color-secondary: #1596bd;
+  --color-bg: #19b2de;
+  --color-text: #494949;
+  --color-accent: #a3a3a3;
+  --color-date: #D8605F;
+}
+
+/* BASE: Reset */
+
+
+
