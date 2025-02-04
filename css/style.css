@@ -390,7 +390,10 @@ textarea {
   flex-shrink: 0;
 }
 
-.page-banner--flag {
+.page-banner_metro_style,
+.page-banner_quick_on_the_feet,
+.page-banner_reinvented {
+  background-color: #FFF;
   display: flex;
   width: 169px;
   height: 64px;
@@ -406,6 +409,8 @@ textarea {
   text-decoration: none;
 }
 
+
+/* Page intro styles */
 .page-intro {
   color: #3B3B3B;
   text-align: center;
