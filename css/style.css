@@ -12,7 +12,7 @@
    ========================================================================== */
 
 html {
-  color: #222;
+  /* color: #222; */
   font-size: 1em;
   line-height: 1.4;
 }
@@ -24,10 +24,10 @@ html {
  * Customize the background color to match your design.
  */
 
-::-moz-selection {
+/* ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
-}
+} */
 
 ::selection {
   background: #b3d4fc;
@@ -46,6 +46,8 @@ img {
   width: 100%;
 }
 
+
+
 /* Typography */
 
 h1,
@@ -54,7 +56,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Ubuntu, sans-serif; 
+  font-family: Ubuntu, Myriad-pro, sans-serif; 
   font-weight: 300;
 }
 
@@ -63,6 +65,8 @@ p {
 }
 
 /* Core Layout */
+
+
 
 .row {
   display: grid;
@@ -80,27 +84,27 @@ p {
 
 /* Medium and up */
 @media screen and (min-width: 40em) {
-.row {
-  max-width: 70rem;
-  column-gap: 1.5rem;
-  row-gap: 1.5rem;
-  margin: 0 auto;
-}
-.m-col-2 {
-  grid-template-columns: 1fr 1fr;
-}
-.m-col-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-.m-col-4 {
-  grid-template-columns: repeat(4, 1fr);
-}
-.m-col-5 {
-  grid-template-columns: repeat(5, 1fr);
-}
-.m-1-2 {
-  grid-template-columns: 1fr, 2fr;
-}
+  .row {
+    max-width: 70rem;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+    margin: 0 auto;
+  }
+    .m-col-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+    .m-col-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .m-col-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .m-col-5 {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    .m-1-2 {
+      grid-template-columns: 1fr 2fr;
+    }
 
 }
 
@@ -115,6 +119,28 @@ p {
 
 
 
+
+
+/* Footer - Emma */
+
+.whats-new.whats-new--header{
+  color: #19B2DE;
+  font-size: 15px;
+}
+
+.whats-new.whats-new--paragraphs {
+  font-size: 9px;
+}
+
+.whats-new.whats-new--bold{
+  color: #19B2DE;
+  font-size: 9px;
+}
+
+footer {
+  background-color: #0E2E4E;
+  color: #FFFFFF;
+  }
 
 
 /*
@@ -195,7 +221,7 @@ textarea {
 
 .visually-hidden {
   border: 0;
-  clip: rect(0, 0, 0, 0);
+  /* clip: rect(0, 0, 0, 0); */
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -214,7 +240,7 @@ textarea {
 
 .visually-hidden.focusable:active,
 .visually-hidden.focusable:focus {
-  clip: auto;
+  /* clip: auto; */
   height: auto;
   margin: 0;
   overflow: visible;
@@ -259,7 +285,7 @@ textarea {
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
+  /* (-webkit-min-device-pixel-ratio: 1.25), */
   (min-resolution: 1.25dppx),
   (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
