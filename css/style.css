@@ -143,8 +143,9 @@ body {
 }
 
 .header-title-icon {
-  padding-bottom: 7px;
-  padding-left: 12px;
+  margin-bottom: -0.5rem;
+  padding-left: 0.5rem;
+  width: 2.5rem;
 }
 
 .nav-container {
