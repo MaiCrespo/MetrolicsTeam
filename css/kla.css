@@ -3,6 +3,7 @@
     --font-family: 'Ubuntu', sans-serif;
     --font-subheading: 'Myriad Pro', sans-serif;
     --font-size-header: 28px;
+    --font-size-date: 20px;
     --font-size-subheading: 18px;
     --font-size-content-heading: 16px;
     --font-size-body: 11px;
@@ -18,7 +19,135 @@
   --color-date: #D8605F;
 }
 
-/* BASE: Reset */
+/* core styles */
+/*whats up lately*/
+.blog--header {
+    font-family: var(--font-family);
+    font-size: var(--font-size-header);
+    color: var(--color-text);
+    text-align: center;
+    font-weight: normal;
+}
 
+.blog--subheader {
+    font-family: var(--font-subheading);
+    font-size: var(--font-size-subheading);
+    color: var(--color-accent);
+    text-align: center;
+    font-weight: normal;
+}
+
+/* tablet view  */
+@media (min-width: 432px) {
+
+.blog-entry {
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes banner to bottom */
+    width: 100%;
+    max-width: 400px;
+    height: 288px;
+    background: lightgrey;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+/* .container{
+    width: 400px;
+    height: 288px;
+    background: lightgrey;
+    margin: auto;
+} */
+
+.date{
+    width: 50px;
+    height: 54px;
+    background-color: var(--color-date);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+.numbered-date {
+    font-size: var(--font-size-date);
+    color: var(--color-primary);
+    text-align: center;
+    margin-top: 5px;
+
+    
+}
+.named-date {
+    font-size: var(--font-size-month);
+    color: var(--color-primary);
+    text-align: center;
+    position: absolute;
+}
+
+.blog-banner {
+    width: 100%;
+    height: 54px;
+    background-color: var(--color-secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/* .blog-banner {
+    width: 400px;
+    height: 54px;
+    background-color: var(--color-secondary);
+    align-items: flex-end;
+} */
+
+.blog-header {
+    font-size: var(--font-size-content-heading);
+    color: var(--color-primary);
+    text-align: center;
+    font-weight: normal;
+}
+
+.blog-subheader {
+    font-family: var(--font-subheading);
+    font-size: var(--font-size-body);
+    color: var(--color-primary);
+    text-align: center;
+    font-weight: normal;
+}
+
+.blog-banner-icon {
+    width: 28px;
+    height: 28px;
+    background-color: var(--color-secondary);
+}
+}
+
+
+
+
+/* Portfolio */
+.portfolio-header {
+    font-family: var(--font-family);
+    font-size: var(--font-size-header);
+    color: var(--color-text);
+    text-align: center;
+    font-weight: normal;
+}
+
+.portfolio-subheader {
+    font-family: var(--font-subheading);
+    font-size: var(--font-size-subheading);
+    color: var(--color-accent);
+    text-align: center;
+    font-weight: normal;
+}
+
+/* Layout */
 
 
