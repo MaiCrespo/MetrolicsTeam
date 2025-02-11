@@ -143,15 +143,13 @@ body {
 }
 
 .header-title-icon {
-  margin-bottom: -0.5rem;
-  padding-left: 0.5rem;
-  width: 2.5rem;
+  padding-bottom: 5px;
+  padding-left: 12px;
 }
 
 .nav-container {
-  max-width: 432px;
+  max-width: 670px;
   width: 100%;
-  height: 100%;
 }
 
 @media (max-width: 768px) {
