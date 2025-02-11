@@ -94,6 +94,11 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
+svg {
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
