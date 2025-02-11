@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Emma's Epic Website</title>
+  <title>Metrolics</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="description" content="The absolute most website ever.">
 
@@ -16,78 +16,182 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
   <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
+    <header class="header-container">
+      <div class="header-title-container">
+        <p class="header-title">Metrolics</p>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M10.6667 -4.19617e-05H16V5.33318H10.6667V-4.19617e-05Z"
+            fill="#FFB901"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 0H5.33334V5.33322H0V0Z"
+            fill="#25C389"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M5.33337 5.33318H10.6667V10.6664H5.33337V5.33318Z"
+            fill="#1691BD"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M3.05176e-05 10.6664H5.33337V15.9996H3.05176e-05V10.6664Z"
+            fill="#FFB901"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M10.6667 10.6664H16V15.9996H10.6667V10.6664Z"
+            fill="#DE6262"
+          />
+        </svg>
+      </div>
+      <nav class="nav-container">
+        <ul class="nav-links-container">
+          <li class="bg-nav-green nav-link-item">
+            <p class="nav-link-text">
+              Home <span class="nav-link-text-icon">&gt;</span>
+            </p>
+          </li>
+          <li class="bg-nav-yellow nav-link-item">
+            <p class="nav-link-text">
+              Portfolio <span class="nav-link-text-icon">&gt;</span>
+            </p>
+          </li>
+          <li class="bg-nav-red nav-link-item">
+            <p class="nav-link-text">
+              Blog <span class="nav-link-text-icon">&gt;</span>
+            </p>
+          </li>
+          <li class="bg-nav-light-blue nav-link-item">
+            <p class="nav-link-text">
+              Quo Vadis? <span class="nav-link-text-icon">&gt;</span>
+            </p>
+          </li>
+          <li class="bg-nav-blue nav-link-item">
+            <p class="nav-link-text">
+              Let's Chat <span class="nav-link-text-icon">&gt;</span>
+            </p>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main-page-content">
+      <div class="hero-container">
+        <img
+          class="hero-container-image"
+          src="assets/banner.png"
+          alt="banner"
+        />
+        <div class="hero-overlay-text-container">
+          <div class="hero-overlay-text-block left-border-blue">
+            <p class="hero-overlay-text">Metro Style</p>
+          </div>
+          <div class="hero-overlay-text-block left-border-red">
+            <p class="hero-overlay-text">Quick on the feet</p>
+          </div>
+          <div class="hero-overlay-text-block left-border-yellow">
+            <p class="hero-overlay-text">Metro Styling reinvented</p>
+          </div>
+        </div>
+      </div>
 
-<header>
-  <nav class="page-menu">
-    <div class="page-menu page-menu--tabs">
-      <div class="buttons">
-        <a href="/" class="buttons buttons--top-left-logo"><img src="/" alt="Metrolics Logo">Metrolics</a>
+      <div class="hero-caption">
+        <p>
+          Hey folks! We're the
+          <span class="hero-caption-highlight">Metrolics</span> team.
+        </p>
+        <p>It sports a responsive layout with a mobile layout theme.</p>
       </div>
-      <div class="button">
-        <a href="/" class="green">Home</a>
+
+      <div class="things-we-do">
+        <p class="things-we-do-title">Things That We Do</p>
+        <p class="things-we-do-subtitle">Ask us what we can do for you</p>
       </div>
-      <div class="button">
-        <a href="/" class="yellow">Portfolio</a>
-      </div>
-      <div class="button">
-        <a href="/" class="red">Blog</a>
-      </div>
-      <div class="button">
-        <a href="/" class="light-blue">Quo Vadis?</a>
-      </div>
-      <div class="button">
-        <a href="/" class="dark-blue">Let's Chat</a>
+
+      <div class="solutions-gallery">
+        <div class="solutions-gallery-item">
+          <img src="assets/bulb.png" alt="bulb-icon" />
+          <div class="solutions-gallery-item-description">
+            <p class="solutions-gallery-item-title">Web Solutions</p>
+            <p class="solutions-gallery-item-subtitle">
+              We are a fairly small, flexible design studio that designs for
+              print and web. We work flexibly with clients to fulfil their
+              design needs. We are confident you will be pleased with the
+              results.
+            </p>
+          </div>
+        </div>
+
+        <div class="solutions-gallery-item">
+          <img src="assets/camera.png" alt="camera-icon" />
+          <div class="solutions-gallery-item-description">
+            <p class="solutions-gallery-item-title">Photography</p>
+            <p class="solutions-gallery-item-subtitle">
+              We are a fairly small, flexible design studio that designs for
+              print and web. We work flexibly with clients to fulfil their
+              design needs. We are confident you will be pleased with the
+              results.
+            </p>
+          </div>
+        </div>
+
+        <div class="solutions-gallery-item">
+          <img src="assets/touch.png" alt="touch-icon" />
+          <div class="solutions-gallery-item-description">
+            <p class="solutions-gallery-item-title">App Development</p>
+            <p class="solutions-gallery-item-subtitle">
+              We are a fairly small, flexible design studio that designs for
+              print and web. We work flexibly with clients to fulfil their
+              design needs. We are confident you will be pleased with the
+              results.
+            </p>
+          </div>
+        </div>
+
+        <div class="solutions-gallery-item">
+          <img src="assets/pencil.png" alt="pencil-icon" />
+          <div class="solutions-gallery-item-description">
+            <p class="solutions-gallery-item-title">UX Design</p>
+            <p class="solutions-gallery-item-subtitle">
+              We are a fairly small, flexible design studio that designs for
+              print and web. We work flexibly with clients to fulfil their
+              design needs. We are confident you will be pleased with the
+              results.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  </nav>
 
-</header>
-
-<main>
-
-  <div class="page-banner">
-    <a href="/"><h2 class="page-banner page-banner--flag">Metro Style</h2></a>
-    <a href="/"><h2 class="page-banner page-banner--flag">Quick on the Feet</h2></a>
-    <a href="/"><h2 class="page-banner page-banner--flag">Metro Styling reinvented</h2></a>
-  </div>
-
-  <h1 class="page-intro">Hey Folks! We are the Metrolics team. It is a responsive layout with a mobile layout.theme</h1>
-  
-  <section class="services">
-
-    <h3 class="services--header">Things That We Do</h3>
-    <h4 class="services--subheader">Ask us what we can do for you</h4>
-
-    <ul class="services services--available">
-      <li class="web-solutions">
-        <img src="/" alt="lightbulb-icon">
-        <h3 class="lightbulb">Web Solutions</h3>
-        <p class="services-paragraphs">We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. We are confident you will be pleased with the results.</p>
-      </li>
-      <li class="web-solutions">
-        <img src="/" alt="Camera Icon">
-        <h3 class="Camera">Web Solutions</h3>
-        <p class="services-paragraphs">We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. We are confident you will be pleased with the results.</p>
-      </li>
-      <li class="web-solutions">
-        <img src="/" alt="Touch Icon">
-        <h3 class="Touch">Web Solutions</h3>
-        <p class="services-paragraphs">We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. We are confident you will be pleased with the results.</p>
-      </li>
-      <li class="web-solutions">
-        <img src="/" alt="Pencil Icon">
-        <h4 class="pencil">Web Solutions</h4>
-        <p class="services-paragraphs">We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. We are confident you will be pleased with the results.</p>
-      </li>
-    </ul>
-
-  </section>
   
   <section class="blog">
     <h2 class="blog blog--header">What's up lately?</h2>
