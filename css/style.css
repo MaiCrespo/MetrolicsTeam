@@ -75,106 +75,61 @@ p {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
-/* Core Layout */
+/* Core Layout - Footer */
 
-/* Whole Footer - Emma */
+.row {
+    display: grid;
+    row-gap: 1rem;
+    scrollbar-width: none;
+}
+
+.col {
+    position: relative;
+}
 
 footer {
   background-color: #0E2E4E;
   color: #FFFFFF;
 }
 
-.footer-row-2 {
+/* Stylized Lines */
 
-}
-
-.col-4--row-1 {
-  display: flex;
-  justify-content: space-around;
-  margin-right: 208px;
-  margin-left: 208px;
-}
-
-row.m-col-2 {
-  display: grid;
-}
-
-/* Mobile Layout -Footer */
-
-@media (min-width: 432px) {
-
-  figure.col {
-    display: grid;
-    grid-template-columns: 30vh 70vh;
-    grid-template-rows: 50vw 50vw;
-    grid-column-gap: 9px;
-    align-items: start;
-    grid-auto-flow: row;
-  }
-
-  .image-of-alf {
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
-    margin-left: 20px;
-
-  }
-
-  .alf-caption {
-    font-size: 12px;
-    width: 256px;
-    height: 144px;
-
-  }
-
-hr.stylized-line-thick {
-  border: 2px solid #FFB901;
-  width: 118px;
-  height: 3px;
+hr.whats-new--stylized-line-blue {
+  border: 1px solid #19B2DE;
+  width: 232px;
   margin: 0;
-  margin-bottom: 17px;
+  margin-top: 10px;
 }
 
+.whats-new--arrow-down-blue {
+  width: 0; 
+  height: 0;
+  margin-left: 15px;
+  margin-bottom: 10px;
 
+  border-left: 4.3px solid transparent;
+  border-right: 4.3px solid transparent;
+  border-top: 4.3px solid #19B2DE;
 }
 
-
-
-/* Tablet Layout */
-@media (min-width: 632px) {
-  
-} 
-
-
-/* Desktop Layout */
-@media (min-width: 1440px) {
-
+hr.whats-new--stylized-line-yellow {
+  border: 1px solid #FFB901;
+  width: 232px;
+  margin: 0;
+  margin-top: 10px;
 }
 
-
-
-
-/* CEO Alf Section */
-
-
-
-
-
-
-
-/* About Us Section */
-
-/* .about-us.about-us--header {
-  color: #FFB901;
-  }
+.whats-new--arrow-down-yellow {
+  width: 0; 
+  height: 0;
+  margin-left: 15px;
+  margin-bottom: 10px;
   
-  .about-us.about-us--paragraphs {
-    font-size: 12px;
-  } */
-  
+  border-left: 4.3px solid transparent;
+  border-right: 4.3px solid transparent;
+  border-top: 4.3px solid #FFB901;
+}
 
-/* Stylized Line */
-/* 
 .whats-new--arrow-down-green {
   width: 0; 
   height: 0;
@@ -191,7 +146,198 @@ hr.whats-new--stylized-line-green {
   width: 232px;
   margin: 0;
   margin-top: 10px;
-} */
+} 
+
+/* Mobile Layout */
+
+@media screen and (max-width: 39.9375em) {
+    .s-hide {
+        display: none;
+    }
+
+    .image-of-alf {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      margin: 30px;
+    }
+  
+    .alf-caption {
+      font-size: 12px;    
+    }
+  
+  hr.stylized-line-thick {
+    border: 2px solid #FFB901;
+    width: 118px;
+    height: 3px;
+    margin-top: 17px;
+    margin-bottom: 17px;
+    /* align-self: end; */
+  }
+  
+  .col-1 {
+    grid-column-start: 1;
+  }
+  
+  .col-2 {
+    grid-column: 2;
+    margin: 30px 30px 30px 0px;
+  }
+
+  .col.m-col-2.col-2 {
+    grid-column: 2 span 2;
+    grid-row: 1 span 1;
+    /* margin: 30px 30px 30px 0px; */
+  }
+
+  .thumbnails.thumbnails--social-media {
+    height: 32px;
+    width: 32px;
+    flex-shrink: 0;
+  }
+
+  .thumbnails.thumbnails--social-media-links {
+    display: grid;
+    grid-template-columns: 32px 32px 32px 32px 32px;
+    grid-template-rows: 32px;
+    align-items: start;
+    justify-items: stretch;
+    grid-gap: 7px;
+    grid-auto-flow: row;
+    margin: 12px 52px 17px 0px;
+  }
+
+  input.email--textbox {
+    background-color: #DE6262;
+    color: white; 
+    border-radius: 4px;
+    width: 239.502px;
+    height: 32px;
+  }
+
+  .submit-button {
+    background-color: #FFB901;
+    color: white;
+    border-radius: 4px;
+    border: 0;
+    margin: 0;
+    width: 53.333px;
+    height: 32px;
+  }
+  
+  .paper-plane-icon{
+    width: 26.667px;
+    height: 17px;
+    border: 0;
+    margin: 0;
+    box-align: center;
+  }
+
+
+
+
+  }
+
+
+/* Tablet Layout */
+
+@media screen and (min-width: 40em) {
+    .row {
+      display:grid;
+      max-width: 70rem;
+      row-gap: 1.5rem;
+      column-gap: 1.5rem;
+      margin: 0 auto;
+    }
+
+    .grid {
+        display: grid;
+        column-gap: 0.5rem;
+        row-gap: 0.5rem;
+    }
+
+    .m-col-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .m-col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .m-col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .m-col-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .m-1-2 {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+/* Desktop Layout */
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .m-row-span {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+
+    .m-hide {
+        display: none;
+    }
+}
+
+/* Large Boys */
+
+@media screen and (min-width: 64em) {
+    .l-col-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .l-col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .l-col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .l-col-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .l-col-6 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .l-row-span {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+
+    .l-hide {
+        display: none;
+    }
+}
+
+
+/* About Us Section */
+
+/* .about-us.about-us--header {
+  color: #FFB901;
+  }
+  
+  .about-us.about-us--paragraphs {
+    font-size: 12px;
+  } */
+  
+
+/* Stylized Line */
+
+
 
 
 /* Instagram Section */
@@ -214,25 +360,7 @@ div.instagram.instagram--thumbnails {
   margin: 0;
 } */
 
-/* Stylized Line */
 
-/* hr.whats-new--stylized-line-blue {
-  border: 1px solid #19B2DE;
-  width: 232px;
-  margin: 0;
-  margin-top: 10px;
-}
-
-.whats-new--arrow-down-blue {
-  width: 0; 
-  height: 0;
-  margin-left: 15px;
-  margin-bottom: 10px;
-
-  border-left: 4.3px solid transparent;
-  border-right: 4.3px solid transparent;
-  border-top: 4.3px solid #19B2DE;
-} */
 
 /* What's New Section */
 
@@ -257,83 +385,25 @@ div.instagram.instagram--thumbnails {
   font-size: 9px
 } */
 
-/* Stylized Line */
 
-/* hr.whats-new--stylized-line-yellow {
-  border: 1px solid #FFB901;
-  width: 232px;
-  margin: 0;
-  margin-top: 10px;
-}
 
-.whats-new--arrow-down-yellow {
-  width: 0; 
-  height: 0;
-  margin-left: 15px;
-  margin-bottom: 10px;
-  
-  border-left: 4.3px solid transparent;
-  border-right: 4.3px solid transparent;
-  border-top: 4.3px solid #FFB901;
-} */
 
 /* Track Us Section */
 /* 
-.thumbnails.thumbnails--social-media {
-  height: 32px;
-  width: 32px;
-  flex-shrink: 0;
-}
+    i think this is useless
 
-.thumbnails.thumbnails--social-media-links {
-  display: grid;
-  grid-template-columns: 32px 32px 32px 32px 32px;
-  grid-template-rows: 32px;
-  align-items: start;
-  justify-items: stretch;
-  grid-gap: 7px;
-  grid-auto-flow: row;
-  margin: 12px 52px 17px 0px;
-}
-
-div.col.col--socials {
+div.col.col--socials (col m-col-2 col-2) {
   width: 432px;
   height: 754px;
   flex-shrink: 0;
-}
-
-
-input.email--textbox {
-  background-color: #DE6262;
-  color: white; 
-  border-radius: 4px;
-  width: 239.502px;
-  height: 32px;
 }
 
 .email {
   flex-wrap: nowrap;
 }
 
-.submit-button {
-  background-color: #FFB901;
-  color: white;
-  border-radius: 4px;
-  border: 0;
-  margin: 0;
-  width: 53.333px;
-  height: 32px;
-}
-
-.paper-plane-icon{
-  width: 26.667px;
-  height: 17px;
-  border: 0;
-  margin: 0;
-  box-align: center;
-}
-
-} */
+    useless^^
+*/
 
 
 /*
