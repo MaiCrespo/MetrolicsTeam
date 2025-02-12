@@ -77,81 +77,166 @@ p {
 
 /* Core Layout */
 
-
-
-.row {
-  display: grid;
-  row-gap: 1rem;
-}
-
-.col {
-  position: relative;
-}
-
-
-
-/* Small only */
-@media screen and (max-width: 39.9375em) {}
-
-/* Medium and up */
-@media screen and (min-width: 40em) {
-  .row {
-    max-width: 70rem;
-    column-gap: 1.5rem;
-    row-gap: 1.5rem;
-    margin: 0 auto;
-  }
-    .m-col-2 {
-      grid-template-columns: 1fr 1fr;
-    }
-    .m-col-3 {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    .m-col-4 {
-      grid-template-columns: repeat(4, 1fr);
-    }
-    .m-col-5 {
-      grid-template-columns: repeat(5, 1fr);
-    }
-    .m-1-2 {
-      grid-template-columns: 1fr 2fr;
-    }
-
-}
-
-/* Medium only */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
-
-/* Large and up */
-@media screen and (min-width: 64em) {}
-
-/* Large only */
-@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
-
-
-
-
-
-/* Footer - Emma */
+/* Whole Footer - Emma */
 
 footer {
   background-color: #0E2E4E;
   color: #FFFFFF;
+}
+
+.footer-row-2 {
 
 }
 
-.image-of-alf {
+.col-4--row-1 {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 208px;
+  margin-left: 208px;
+}
+
+row.m-col-2 {
+  display: grid;
+}
+
+/* Mobile Layout -Footer */
+
+@media (min-width: 432px) {
+
+  figure.col {
+    display: grid;
+    grid-template-columns: 30vh 70vh;
+    grid-template-rows: 50vw 50vw;
+    grid-column-gap: 9px;
+    align-items: start;
+    grid-auto-flow: row;
+  }
+
+  .image-of-alf {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    margin-left: 20px;
+
+  }
+
+  .alf-caption {
+    font-size: 12px;
+    width: 256px;
+    height: 144px;
+
+  }
+
+hr.stylized-line-thick {
+  border: 2px solid #FFB901;
   width: 118px;
-  height: 118px;
-  border-radius: 50%;
+  height: 3px;
+  margin: 0;
+  margin-bottom: 17px;
+}
+
+
+}
+
+
+
+/* Tablet Layout */
+@media (min-width: 632px) {
+  
+} 
+
+
+/* Desktop Layout */
+@media (min-width: 1440px) {
+
+}
+
+
+
+
+/* CEO Alf Section */
+
+
+
+
+
+
+
+/* About Us Section */
+
+/* .about-us.about-us--header {
+  color: #FFB901;
+  }
+  
+  .about-us.about-us--paragraphs {
+    font-size: 12px;
+  } */
+  
+
+/* Stylized Line */
+/* 
+.whats-new--arrow-down-green {
+  width: 0; 
+  height: 0;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  
+  border-left: 4.3px solid transparent;
+  border-right: 4.3px solid transparent;
+  border-top: 4.3px solid #21C183;
+}
+
+hr.whats-new--stylized-line-green {
+  border: 1px solid #21C183;
+  width: 232px;
+  margin: 0;
+  margin-top: 10px;
+} */
+
+
+/* Instagram Section */
+
+/* .instagram.instagram--header {
+  color: #DE6262;
+  }
+
+div.instagram.instagram--thumbnails {
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 232px;
+  height: 224px;
 }
 
 .instagram.instagram--image {
-  width: 61px;
+  width: 64px;
   height: 64px;
+  margin: 0;
+} */
+
+/* Stylized Line */
+
+/* hr.whats-new--stylized-line-blue {
+  border: 1px solid #19B2DE;
+  width: 232px;
+  margin: 0;
+  margin-top: 10px;
 }
 
-.whats-new.whats-new--header{
+.whats-new--arrow-down-blue {
+  width: 0; 
+  height: 0;
+  margin-left: 15px;
+  margin-bottom: 10px;
+
+  border-left: 4.3px solid transparent;
+  border-right: 4.3px solid transparent;
+  border-top: 4.3px solid #19B2DE;
+} */
+
+/* What's New Section */
+
+/* .whats-new.whats-new--header{
   color: #19B2DE;
   font-size: 15px;
 }
@@ -170,25 +255,11 @@ footer {
 .highlight-bold {
   color: #19B2DE;
   font-size: 9px
-}
+} */
 
-.about-us.about-us--header {
-color: #FFB901;
-}
+/* Stylized Line */
 
-.about-us.about-us--paragraphs {
-  font-size: 12px;
-}
-
-.instagram.instagram--header {
-color: #DE6262;
-}
-
-.alf-caption {
-  font-size: 12px;
-}
-
-hr.whats-new--stylized-line-yellow {
+/* hr.whats-new--stylized-line-yellow {
   border: 1px solid #FFB901;
   width: 232px;
   margin: 0;
@@ -204,31 +275,33 @@ hr.whats-new--stylized-line-yellow {
   border-left: 4.3px solid transparent;
   border-right: 4.3px solid transparent;
   border-top: 4.3px solid #FFB901;
-}
+} */
 
-hr.whats-new--stylized-line-blue {
-  border: 1px solid #19B2DE;
-  width: 232px;
-  margin: 0;
-  margin-top: 10px;
-}
-
-.whats-new--arrow-down-blue {
-  width: 0; 
-  height: 0;
-  margin-left: 15px;
-  margin-bottom: 10px;
-
-  border-left: 4.3px solid transparent;
-  border-right: 4.3px solid transparent;
-  border-top: 4.3px solid #19B2DE;
-}
-
-.thumbnails.thumbnails--instagram {
+/* Track Us Section */
+/* 
+.thumbnails.thumbnails--social-media {
   height: 32px;
   width: 32px;
   flex-shrink: 0;
 }
+
+.thumbnails.thumbnails--social-media-links {
+  display: grid;
+  grid-template-columns: 32px 32px 32px 32px 32px;
+  grid-template-rows: 32px;
+  align-items: start;
+  justify-items: stretch;
+  grid-gap: 7px;
+  grid-auto-flow: row;
+  margin: 12px 52px 17px 0px;
+}
+
+div.col.col--socials {
+  width: 432px;
+  height: 754px;
+  flex-shrink: 0;
+}
+
 
 input.email--textbox {
   background-color: #DE6262;
@@ -260,6 +333,7 @@ input.email--textbox {
   box-align: center;
 }
 
+} */
 
 
 /*
