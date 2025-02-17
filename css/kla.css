@@ -25,7 +25,7 @@
     font-size: var(--font-size-header);
     color: var(--color-text);
     text-align: center;
-    font-weight: 330;
+    font-weight: 3;
     margin-top: 60px;
     margin-bottom: auto;
 }
@@ -39,8 +39,7 @@
     margin: 0px 0 40px 0;
 }
 
-/* tablet view  */
-@media (min-width: 432px) {
+/* mobile view  */
 
 .blog-entry {
     font-family: var(--font-family);
@@ -136,24 +135,98 @@
 
 /* Portfolio */
 .project-item {
+    font-family: var(--font-family);
+}
+.project-item {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
 }
 .project-item > * {
-    margin: 10px; /* Adjust the margin value as needed */
+    margin: 9px; /* Adjust the margin value as needed */
 }
 
 .project-item img {
-    object-fit: cover; /* This will crop the image to fit the container */
-    width: 100%; /* Ensure the image takes up the full width of its container */
-    height: 100%; /* Ensure the image takes up the full height of its container */
+    position: relative;
+    width: 400px; 
+    height: 256px; 
 }
 
+.project-item-overlay {
+    display: none;
+}
 
+} 
 
 /* Layout */
 /* tablet view */
 
 
 
-} 
+@media (min-width: 632px){
+
+.section-portfolio-headers {
+    margin-top: 60px;
+    margin-bottom: auto;
+
+}
+    
+    .portfolio .project-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; /* Space between images */
+        padding: 20px;
+    }
+    .project-item img{
+        width: 292px;
+        height: 256px;
+
+    }
+    .project-items { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1440px){
+
+
+
+
+
+.project-item-overlay {
+    position: absolute; 
+    width: 400px; /* Full width (cover the whole page) */
+    height: 256px; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-bg);
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.project-item:hover .project-item-overlay {
+    opacity: 80%; 
+}
+
+}
