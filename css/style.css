@@ -26,6 +26,7 @@ html {
   font-size: 1em;
   line-height: 1.4;
   border: 0;
+  width: 100%;
 }
 
 /*
@@ -58,7 +59,6 @@ img {
 }
 
 
-
 /* Typography */
 
 h1,
@@ -73,7 +73,12 @@ h6 {
 
 p {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 9px;
+  line-height: 14px;
+  font-weight: 700;
 }
+
 
 /* Core Layout - Footer */
 
@@ -90,92 +95,21 @@ p {
 footer {
   background-color: #0E2E4E;
   color: #FFFFFF;
+  width: 100%;
 }
 
-/* Stylized Lines */
-
-hr.whats-new--stylized-line-blue {
-  border: 1px solid #19B2DE;
-  width: 232px;
-  margin: 0;
-  margin-top: 10px;
-}
-
-.whats-new--arrow-down-blue {
-  width: 0; 
-  height: 0;
-  margin-left: 15px;
-  margin-bottom: 10px;
-
-  border-left: 4.3px solid transparent;
-  border-right: 4.3px solid transparent;
-  border-top: 4.3px solid #19B2DE;
-}
-
-hr.whats-new--stylized-line-yellow {
-  border: 1px solid #FFB901;
-  width: 232px;
-  margin: 0;
-  margin-top: 10px;
-}
-
-.whats-new--arrow-down-yellow {
-  width: 0; 
-  height: 0;
-  margin-left: 15px;
-  margin-bottom: 10px;
-  
-  border-left: 4.3px solid transparent;
-  border-right: 4.3px solid transparent;
-  border-top: 4.3px solid #FFB901;
-}
-
-.whats-new--arrow-down-green {
-  width: 0; 
-  height: 0;
-  margin-left: 15px;
-  margin-bottom: 10px;
-  
-  border-left: 4.3px solid transparent;
-  border-right: 4.3px solid transparent;
-  border-top: 4.3px solid #21C183;
-}
-
-hr.whats-new--stylized-line-green {
-  border: 1px solid #21C183;
-  width: 232px;
-  margin: 0;
-  margin-top: 10px;
-} 
 
 /* Mobile Layout */
 
-@media screen and (max-width: 39.9375em) {
+@media screen and (max-width: 39em) {
+
     .s-hide {
         display: none;
     }
 
-    .image-of-alf {
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      margin: 30px;
-    }
+
   
-    .alf-caption {
-      font-size: 12px;    
-    }
-  
-  hr.stylized-line-thick {
-    border: 2px solid #FFB901;
-    width: 118px;
-    height: 3px;
-    margin-top: 17px;
-    margin-bottom: 17px;
-    /* align-self: end; */
-  }
-  
-  .col-1 {
+  /* .col-1 {
     grid-column-start: 1;
   }
   
@@ -184,55 +118,25 @@ hr.whats-new--stylized-line-green {
     margin: 30px 30px 30px 0px;
   }
 
-  .col.m-col-2.col-2 {
-    grid-column: 2 span 2;
-    grid-row: 1 span 1;
-    /* margin: 30px 30px 30px 0px; */
+  .col-3 {
+    display: flex;
+    grid-column-start: 1;
+    width: 96px;
+    justify-content: center;
   }
 
-  .thumbnails.thumbnails--social-media {
-    height: 32px;
-    width: 32px;
-    flex-shrink: 0;
+  .col.m-col-2.col-2{
+    grid-column: 2;
+    margin: 30px 30px 30px 0px;
+  } */
+
+  /* .footer-track-us {
+    order: 1;
   }
 
-  .thumbnails.thumbnails--social-media-links {
-    display: grid;
-    grid-template-columns: 32px 32px 32px 32px 32px;
-    grid-template-rows: 32px;
-    align-items: start;
-    justify-items: stretch;
-    grid-gap: 7px;
-    grid-auto-flow: row;
-    margin: 12px 52px 17px 0px;
-  }
-
-  input.email--textbox {
-    background-color: #DE6262;
-    color: white; 
-    border-radius: 4px;
-    width: 239.502px;
-    height: 32px;
-  }
-
-  .submit-button {
-    background-color: #FFB901;
-    color: white;
-    border-radius: 4px;
-    border: 0;
-    margin: 0;
-    width: 53.333px;
-    height: 32px;
-  }
-  
-  .paper-plane-icon{
-    width: 26.667px;
-    height: 17px;
-    border: 0;
-    margin: 0;
-    box-align: center;
-  }
-
+  .footer-mastadon {
+    order:2;
+  } */
 
 
 
@@ -324,25 +228,46 @@ hr.whats-new--stylized-line-green {
 }
 
 
+/* STYLING THINGS (help) */
+
+/* Alf Section */
+
+.image-of-alf {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin: 30px;
+}
+
+p.alf-caption {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;    
+}
+
+hr.stylized-line-thick {
+border: 2px solid #FFB901;
+width: 118px;
+height: 3px;
+margin-top: 17px;
+margin-bottom: 17px;
+}
+
+
 /* About Us Section */
 
-/* .about-us.about-us--header {
+.about-us.about-us--header {
   color: #FFB901;
   }
-  
+
   .about-us.about-us--paragraphs {
     font-size: 12px;
-  } */
-  
-
-/* Stylized Line */
-
-
+  }
 
 
 /* Instagram Section */
 
-/* .instagram.instagram--header {
+.instagram.instagram--header {
   color: #DE6262;
   }
 
@@ -358,13 +283,12 @@ div.instagram.instagram--thumbnails {
   width: 64px;
   height: 64px;
   margin: 0;
-} */
-
+}
 
 
 /* What's New Section */
 
-/* .whats-new.whats-new--header{
+.whats-new.whats-new--header{
   color: #19B2DE;
   font-size: 15px;
 }
@@ -383,27 +307,141 @@ div.instagram.instagram--thumbnails {
 .highlight-bold {
   color: #19B2DE;
   font-size: 9px
-} */
-
-
+}
 
 
 /* Track Us Section */
-/* 
-    i think this is useless
 
-div.col.col--socials (col m-col-2 col-2) {
-  width: 432px;
-  height: 754px;
+.thumbnails.thumbnails--social-media {
+  height: 32px;
+  width: 32px;
   flex-shrink: 0;
+}
+
+.thumbnails.thumbnails--social-media-links {
+  display: grid;
+  grid-template-columns: 32px 32px 32px 32px 32px;
+  grid-template-rows: 32px;
+  align-items: start;
+  justify-items: stretch;
+  grid-gap: 7px;
+  grid-auto-flow: row;
+  margin: 12px 52px 17px 0px;
+}
+
+input.email--textbox {
+  background-color: #DE6262;
+  color: white; 
+  border-radius: 4px;
+  width: 239.502px;
+  height: 32px;
+}
+
+.submit-button {
+  background-color: #FFB901;
+  color: white;
+  border-radius: 4px;
+  border: 0;
+  margin: 0;
+  width: 53.333px;
+  height: 32px;
+}
+
+.paper-plane-icon{
+  width: 26.667px;
+  height: 17px;
+  border: 0;
+  margin: 0;
+  align-items: center;
 }
 
 .email {
   flex-wrap: nowrap;
 }
 
-    useless^^
-*/
+    /* i think this is useless */
+/* 
+.col.col--social (col m-col-2 col-2) {
+  width: 432px;
+  height: 754px;
+  flex-shrink: 0;
+} */
+
+    /* useless^^ */
+
+
+/* Bottom of Footer */
+
+.background-colour-bar {
+  align-self: center;
+  width: 400px;
+  margin-left: 10vw;
+}
+
+
+/* Stylized Lines */
+
+hr.whats-new--stylized-line-blue {
+  border: 1px solid #19B2DE;
+  width: 232px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.whats-new--arrow-down-blue {
+  width: 0; 
+  height: 0;
+  margin-left: 15px;
+  margin-bottom: 10px;
+
+  border-left: 4.3px solid transparent;
+  border-right: 4.3px solid transparent;
+  border-top: 4.3px solid #19B2DE;
+}
+
+hr.whats-new--stylized-line-yellow {
+  border: 1px solid #FFB901;
+  width: 232px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.whats-new--arrow-down-yellow {
+  width: 0; 
+  height: 0;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  
+  border-left: 4.3px solid transparent;
+  border-right: 4.3px solid transparent;
+  border-top: 4.3px solid #FFB901;
+}
+
+.whats-new--arrow-down-green {
+  width: 0; 
+  height: 0;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  
+  border-left: 4.3px solid transparent;
+  border-right: 4.3px solid transparent;
+  border-top: 4.3px solid #21C183;
+}
+
+hr.whats-new--stylized-line-green {
+  border: 1px solid #21C183;
+  width: 232px;
+  margin: 0;
+  margin-top: 10px;
+} 
+
+
+
+
+
+
+
+
 
 
 /*
