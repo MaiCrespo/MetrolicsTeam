@@ -138,7 +138,7 @@ footer {
 
 /* Mobile Layout */
 
-@media screen and (max-width: 624px) {
+@media screen and (max-width: 639px) {
 
     .s-hide {
         display: none;
