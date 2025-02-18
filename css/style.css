@@ -110,7 +110,7 @@ footer {
 
 .footer {
     margin: auto;
-    padding-bottom: 150px solid;
+    padding-bottom: 150px;
     max-width: 1024px;
     /* background-color: #0E2E4E; */
 }
