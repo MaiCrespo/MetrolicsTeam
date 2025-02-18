@@ -75,15 +75,203 @@ textarea {
 
 
 /* 1.2 Core Styling */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+/* BASE: Define Variables */
+:root {
+    --font-family: 'Ubuntu', sans-serif;
+    --font-size-header: 28px;
+    --font-size-date: 20px;
+    --font-size-subheading: 18px;
+    --font-size-content-heading: 16px;
+    --font-size-body: 11px;
+    --font-size-month: 8px;
+    
+
+     /* Colors */
+  --color-primary: #ffffff;
+  --color-secondary: #1596bd;
+  --color-bg: #19b2de;
+  --color-text: #494949;
+  --color-accent: #a3a3a3;
+  --color-date: #D8605F;
+}
+
+.blog-entry {
+    display: flex;
+    justify-content: center; 
+    min-width: none;
+    height: 288px;
+    margin: 20px auto;
+    position: relative;
+    width: 400px;
+    height: 288px;
+}
 
 
+.blog-entry-img {
+    border-radius: 2px;
+}
+
+.date{
+    width: 50px;
+    height: 54px;
+    background-color: var(--color-date);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height:18.38px;
+    left: 0%;
+    
+}
+
+.numbered-date {
+    font-size: var(--font-size-date);
+    font-weight: lighter;
+    color: var(--color-primary);
+}
+.named-date {
+    font-size: var(--font-size-month);
+    font-weight: lighter;
+    color: var(--color-primary);
+    margin-top: 15;
+    position: absolute;
+    top: 13px;
+    bottom: 10px;
+    left: 8px;
+}
+
+.blog-banner {
+    width: 100%;
+    height: 54px;
+    background-color: var(--color-bg);
+    position: absolute;
+    bottom: 0%;
+}
+
+.blog-header {
+    font-size: var(--font-size-content-heading);
+    font-weight: lighter;
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+    height: 15px;
+    align-self: center;
+    transform: translateY(-12px); 
+}
+
+.blog-subheader {
+    font-size: var(--font-size-body);
+    font-weight: lighter;
+    color: var(--color-primary);
+    text-align: left;
+    position: absolute;
+    margin-top: -5px; 
+    margin-left: 0px;
+}
+
+.blog-banner-icon {
+    width: 28px;
+    height: 28px;
+    background-color: var(--color-secondary);
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 87%;
+}
+
+/* gallery */
+
+.project-item img{
+    width: 320px;
+    height: 256px;
+    border-radius: 2px;
+}
+
+.project-item {
+    position: relative;
+}
+
+.project-items {
+    margin: auto;
+    margin-bottom: 80px;
+    display: grid;
+    gap: 32px;
+    max-width: 1200px; 
+    width: 100%; 
+}
+
+.project-item-overlay {
+    border: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25, 178, 222, 0.83);
+    opacity: 0;
+    transition: background-color 0.3s ease;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 80%
+}
+
+.project-item:hover .overlay {
+    opacity: 1;
+}
 /* 1.3 Typgraphy */
+
+.blog--header, .portfolio-header {
+    font-family: var(--font-family);
+    font-size: var(--font-size-header);
+    color: var(--color-text);
+    text-align: center;
+    font-weight: 3;
+}
+
+.blog--subheader, .portfolio-subheader {
+    font-family: var(--font-family);
+    font-size: var(--font-size-subheading);
+    color: var(--color-accent);
+    text-align: center;
+    font-weight: normal;
+
+}
+
+.blog-entry {
+    font-family: var(--font-family);
+    gap: 20px; 
+    
+}
 
 
 /* ==========================================================================
    2. LAYOUT
    ========================================================================== */
 
+   /* Helper to display empty layout containers*/
+
+div,
+main,
+section,
+footer,
+header {
+    outline: 1px solid #ccc;
+    min-height: 1rem;
+    padding: 1rem;
+}
 
 
 
@@ -92,15 +280,76 @@ textarea {
 
 /* 2.1 Core layout */
 
+.row {
+    display: grid;
+    row-gap: 1rem;
+}
 
-/* 2.2 Small only 
+.col {
+    position: relative;
+    background-color: rgb(242, 230, 177);
+}
 
-/* 2.3 medium and up 
 
-/* 2.4 Medium only
 
-/* 2.5 large screens and up 2.6 Large only
 
+/* 2.2 Small only */
+
+@media screen and (max-width: 39.9375em) {
+    
+    .project-item-overlay {
+        display: none;
+    }
+}
+
+
+/* 2.3 medium and up */
+@media screen and (min-width: 40em) {
+    .row {
+        max-width: 70rem;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+        margin: 0 auto;
+    }
+    .grid {
+        display: grid;
+        column-gap: 0.5rem;
+        row-gap: 0.5rem;
+    }
+    .m-col-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .m-col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .project-item-overlay {
+        display: none;
+    }
+    .m-row-span {
+        column-span: 2;
+        width: 600px;
+        height: 482px;
+        flex-shrink: 0;
+    }
+
+
+
+}
+
+/* 2.4 Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+
+}
+/* 2.5 large screens and up 2.6 Large only */
+
+@media screen and (min-width: 64em) {
+    .l-col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+}
 /* ==========================================================================
    2. MODULES
    ========================================================================== */
