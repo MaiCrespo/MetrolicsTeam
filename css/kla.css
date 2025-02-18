@@ -18,8 +18,52 @@
   --color-date: #D8605F;
 }
 
-/* core styles */
-/*whats up lately*/
+/* 1.2 Core Styling */
+
+img {
+    width: 100%;
+}
+
+
+/* 1.3 Typgraphy */
+
+.blog--header, .portfolio-header {
+    font-family: var(--font-family);
+    font-size: var(--font-size-header);
+    color: var(--color-text);
+    text-align: center;
+    font-weight: 3;
+}
+
+.blog--subheader, .portfolio-subheader {
+    font-family: var(--font-family);
+    font-size: var(--font-size-subheading);
+    color: var(--color-accent);
+    text-align: center;
+    font-weight: normal;
+
+}
+
+
+
+
+/* 2.1 Core layout */
+
+.row {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.col {
+    position: relative;
+    background-color: rgb(242, 230, 177);
+}
+
+
+
+/* 
+core styles
+/*whats up lately*
 .blog--header, .portfolio-header {
     font-family: var(--font-family);
     font-size: var(--font-size-header);
@@ -39,8 +83,7 @@
     margin: 0px 0 40px 0;
 }
 
-/* mobile view  */
-
+/* mobile view  *
 .blog-entry {
     font-family: var(--font-family);
     gap: 20px; 
@@ -133,7 +176,7 @@
 
 
 
-/* Portfolio */
+/* Portfolio *
 .project-item {
     font-family: var(--font-family);
 }
@@ -145,7 +188,7 @@
     position: relative;
 }
 .project-item > * {
-    margin: 9px; /* Adjust the margin value as needed */
+    margin: 9px; /* Adjust the margin value as needed *
 }
 
 .project-item img {
@@ -163,8 +206,20 @@
 /* Layout */
 /* tablet view */
 
+/* Helper to display empty layout containers*/
+
+div,
+main,
+section,
+footer,
+header {
+    outline: 1px solid #ccc;
+    min-height: 1rem;
+    padding: 1rem;
+}
 
 
+/*
 @media (min-width: 632px){
 
 .section-portfolio-headers {
@@ -177,7 +232,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px; /* Space between images */
+        gap: 20px; /* Space between images *
         padding: 20px;
     }
     .project-item img{
@@ -229,4 +284,5 @@
     opacity: 80%; 
 }
 
-}
+} 
+*/
