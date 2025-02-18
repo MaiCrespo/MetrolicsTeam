@@ -23,7 +23,7 @@
 
 
 /* ==========================================================================
-   BASE
+    BASE
    ========================================================================== */
 
 
@@ -97,12 +97,12 @@ img {
     
 
      /* Colors */
-  --color-primary: #ffffff;
-  --color-secondary: #1596bd;
-  --color-bg: #19b2de;
-  --color-text: #494949;
-  --color-accent: #a3a3a3;
-  --color-date: #D8605F;
+    --color-primary: #ffffff;
+    --color-secondary: #1596bd;
+    --color-bg: #19b2de;
+    --color-text: #494949;
+    --color-accent: #a3a3a3;
+    --color-date: #D8605F;
 }
 
 .blog-entry {
@@ -265,17 +265,17 @@ img {
 
 
 /* ==========================================================================
-   2. LAYOUT
+    2. LAYOUT
    ========================================================================== */
 
-   /* Helper to display empty layout containers*/
+    /* Helper to display empty layout containers*/
 
 
 
 
 
 
-   
+    
 
 /* 2.1 Core layout */
 
@@ -286,7 +286,7 @@ img {
 
 .col {
     position: relative;
-    background-color: rgb(242, 230, 177);
+    /* background-color: rgb(242, 230, 177); */
 }
 
 
