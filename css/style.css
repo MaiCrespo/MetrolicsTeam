@@ -1,20 +1,32 @@
-/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+/* BASE: Define Variables */
+:root {
+  --font-family: 'Ubuntu', sans-serif;
+  --font-subheading: 'Myriad Pro', sans-serif;
+  --font-size-header: 28px;
+  --font-size-subheading: 18px;
+  --font-size-content-heading: 16px;
+  --font-size-body: 11px;
+  --font-size-month: 8px;
+  
+   /* Colors */
+--color-primary: #ffffff;
+--color-secondary: #1596bd;
+--color-bg: #19b2de;
+--color-text: #494949;
+--color-accent: #a3a3a3;
+--color-date: #D8605F;
+}
 
 /* ==========================================================================
     Base styles: opinionated defaults
    ========================================================================== */
 
 html {
-  color: #222;
+  /* color: #222; */
   font-size: 1em;
   line-height: 1.4;
+  border: 0;
+  width: 100%;
 }
 
 /*
@@ -24,22 +36,577 @@ html {
  * Customize the background color to match your design.
  */
 
-::-moz-selection {
+/* ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
-}
+} */
 
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
 }
 
+/* Core Styling */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Ubuntu, Myriad-pro, sans-serif; 
+  font-weight: 300;
+}
+
+p {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 9px;
+  line-height: 14px;
+  font-weight: 700;
+}
+
+
+/* Core Layout - Footer */
+
+.row {
+    display: grid;
+    row-gap: 1rem;
+    /* scrollbar-width: none; */
+}
+
+.col {
+    position: relative;
+    display: grid;
+}
+
+footer {
+  background-color: #0E2E4E;
+  color: #FFFFFF;
+  min-height: 1rem;
+  padding: 1rem;
+}
+
+section,
+footer {
+    display: grid;
+    min-height: 1rem;
+    padding: 1rem;
+}
+
+
+.footer {
+    margin: auto;
+    padding-bottom: 150px;
+    max-width: 1024px;
+    /* background-color: #0E2E4E; */
+}
+
+/* 
+.footer-profile {
+  order: ;
+}
+
+.footer-about-us {
+  order: ;
+}
+
+.footer-socials {
+  order: ;
+}
+
+.footer-whats-new {
+  order: ;
+}
+
+.footer-track-us {
+  order: ;
+} */
+
+/* Mobile Layout */
+
+@media screen and (max-width: 624px) {
+
+    .s-hide {
+        display: none;
+    }
+
+    .s-col-3 {
+        display: grid;
+        /* grid-template-columns: repeat(3, 1fr); */
+    }
+
+    .footer-profile-image {
+      grid-column-start: 1;
+}
+
+    .footer-profile-caption {
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+
+    .footer-profile {
+      order: -1;
+    }
+    
+    /* .footer-track-us-help {
+      order: 0;
+      grid-row-start: 2;
+      grid-column-start: 1;
+    } */
+
+    .footer-track-us {
+      order: 0;
+      grid-row-start: 2;
+      /* grid-column-start: 2;
+      grid-column-end: 2; */
+    }
+
+    .footer-whats-new {
+      order: 1;
+      grid-row: 3;
+    }
+        
+    .background-colour-bar {
+      order: 4;
+      grid-row: 4;
+    }
+  }
+
+
+  @media screen and (min-width: 624px) and (max-width: 640px){
+    .m-hide {
+      display: none;
+  }
+  }
+
+/* Tablet Layout Medium + Up */
+
+@media screen and (min-width: 640px) {
+    .row {
+      display:grid;
+      max-width: 70rem;
+      row-gap: 1.5rem;
+      column-gap: 1.5rem;
+      margin: 0 auto;
+    }
+
+    .grid {
+        display: grid;
+        column-gap: 0.5rem;
+        row-gap: 0.5rem;
+    }
+
+    /* .m-hide {
+      display: none;
+  } */
+
+    .m-col-2 {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .m-col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .m-col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .m-col-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .m-1-2 {
+        grid-template-columns: 1fr 2fr;
+    }
+
+mine ahhh
+    .m-row-span-2 {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+
+    .footer-profile {
+      order: 1;
+      grid-column: span 4/4;
+
+    }
+    
+    .footer-about-us {
+      order: 2;
+      grid-column: span 2/2;
+      grid-row: 2;
+    }
+    
+    .footer-socials {
+      order: 3;
+      grid-column: span 2/4;
+      grid-row: 2;
+    }
+    
+    .footer-whats-new {
+      order: 4;
+      grid-column: span 2/2;
+      grid-row: 3;
+    }
+    
+    .footer-track-us {
+      order: 5;
+      grid-column: span 2/4;
+      grid-row: 3;
+    }
+
+
+
+    .background-colour-bar {
+      order: 6;
+      grid-row-start: 4;
+    }
+
+}
+
+
+/* Medium Only */
+
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+    .m-row-span {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+
+    .m-hide {
+        display: none;
+    }
+
+    /* mine ahhh */
+    
+      .m-row-span-2 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+}
+
+
+
+/* Large Boys (Desktop) */
+
+@media screen and (min-width: 1024px) {
+    .l-col-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .l-col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .l-col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .l-col-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .l-col-6 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .l-row-span {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+
+    .l-hide {
+        display: none;
+    }
+    
+/* mine ahhh */
+
+  .l-row-span-2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .footer-profile {
+    order: 1;
+    grid-row: 1;
+    grid-column: span 3/4;
+  }
+  
+  .footer-about-us {
+    order: 2;
+    grid-row: 2;
+    grid-column: 1;
+
+    max-width: 232px;
+  }
+  
+  .footer-socials {
+    order: 3;
+    grid-row: 2;
+    grid-column: 2;
+  }
+  
+  .footer-whats-new {
+    order: 4;
+    grid-row: 2;
+    grid-column: 3;
+
+    min-width: 320px;
+    max-width: 395px;
+  }
+  
+  .footer-track-us {
+    order: 5;
+    grid-row: 2;
+    grid-column: 4;
+  } 
+
+  .background-colour-bar {
+    order: 6;
+    grid-row-start: 3;
+  }
+
+}
+
+
+/* STYLING THINGS (help) */
+
+/* Alf Section */
+
+.image-of-alf {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin: 1rem;
+}
+
+p.alf-caption {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+hr.stylized-line-thick {
+border: 2px solid #FFB901;
+width: 118px;
+height: 3px;
+margin-top: 17px;
+margin-bottom: 17px;
+}
+
+
+/* About Us Section */
+
+.about-us.about-us--header {
+  color: #FFB901;
+  }
+
+  .about-us.about-us--paragraphs {
+    font-size: 12px;
+  }
+
+
+/* Instagram Section */
+
+.instagram.instagram--header {
+  color: #DE6262;
+  }
+
+div.instagram.instagram--thumbnails {
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 232px;
+  height: 224px;
+}
+
+.instagram.instagram--image {
+  width: 64px;
+  height: 64px;
+  margin: 0;
+}
+
+
+/* What's New Section */
+
+.whats-new.whats-new--header{
+  color: #19B2DE;
+  font-size: 15px;
+}
+
+.whats-new.whats-new--paragraphs {
+  font-size: 9px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.whats-new.whats-new--bold{
+  color: #19B2DE;
+  font-size: 9px;
+}
+
+.highlight-bold {
+  color: #19B2DE;
+  font-size: 9px
+}
+
+
+/* Track Us Section */
+
+.thumbnails.thumbnails--social-media {
+  height: 32px;
+  width: 32px;
+  flex-shrink: 0;
+}
+
+.thumbnails.thumbnails--social-media-links {
+  display: grid;
+  grid-template-columns: 32px 32px 32px 32px 32px;
+  grid-template-rows: 32px;
+  align-items: start;
+  justify-items: stretch;
+  grid-gap: 7px;
+  grid-auto-flow: row;
+  margin: 12px 52px 17px 0px;
+}
+
+input.email--textbox {
+  background-color: #DE6262;
+  color: white; 
+  border-radius: 4px;
+  width: 239.502px;
+  height: 32px;
+}
+
+.submit-button {
+  background-color: #FFB901;
+  color: white;
+  border-radius: 4px;
+  border: 0;
+  margin: 0;
+  width: 53.333px;
+  height: 32px;
+}
+
+.paper-plane-icon{
+  width: 26.667px;
+  height: 17px;
+  border: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.email {
+  flex-wrap: nowrap;
+}
+
+    /* i think this is useless */
+/* 
+.col.col--social (col m-col-2 col-2) {
+  width: 432px;
+  height: 754px;
+  flex-shrink: 0;
+} */
+
+    /* useless^^ */
+
+
+/* Bottom of Footer */
+
+.background-colour-bar {
+  align-self: center;
+  width: 400px;
+  margin-left: 10vw;
+}
+
+
+/* Stylized Lines */
+
+hr.whats-new--stylized-line-blue {
+  border: 1px solid #19B2DE;
+  width: 232px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.whats-new--arrow-down-blue {
+  width: 0; 
+  height: 0;
+  margin-left: 15px;
+  margin-bottom: 10px;
+
+  border-left: 4.3px solid transparent;
+  border-right: 4.3px solid transparent;
+  border-top: 4.3px solid #19B2DE;
+}
+
+hr.whats-new--stylized-line-yellow {
+  border: 1px solid #FFB901;
+  width: 232px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.whats-new--arrow-down-yellow {
+  width: 0; 
+  height: 0;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  
+  border-left: 4.3px solid transparent;
+  border-right: 4.3px solid transparent;
+  border-top: 4.3px solid #FFB901;
+}
+
+.whats-new--arrow-down-green {
+  width: 0; 
+  height: 0;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  
+  border-left: 4.3px solid transparent;
+  border-right: 4.3px solid transparent;
+  border-top: 4.3px solid #21C183;
+}
+
+hr.whats-new--stylized-line-green {
+  border: 1px solid #21C183;
+  width: 232px;
+  margin: 0;
+  margin-top: 10px;
+} 
+
+
+
+
+
+
+
+
+
+
 /*
  * A better looking default horizontal rule
  */
 
 hr {
-  display: block;
+  /* display: block; */
   height: 1px;
   border: 0;
   border-top: 1px solid #ccc;
@@ -81,7 +648,7 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+    Author's custom styles
    ========================================================================== */
 /* Header and Navigation Styles */
 * {
@@ -404,8 +971,12 @@ svg {
 }
 
 
+
+
+
+  
 /* ==========================================================================
-   Helper classes
+    Helper classes
    ========================================================================== */
 
 /*
@@ -428,7 +999,7 @@ svg {
 
 .visually-hidden {
   border: 0;
-  clip: rect(0, 0, 0, 0);
+  /* clip: rect(0, 0, 0, 0); */
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -447,7 +1018,7 @@ svg {
 
 .visually-hidden.focusable:active,
 .visually-hidden.focusable:focus {
-  clip: auto;
+  /* clip: auto; */
   height: auto;
   margin: 0;
   overflow: visible;
@@ -482,9 +1053,9 @@ svg {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
+    EXAMPLE Media Queries for Responsive Design.
+    These examples override the primary ('mobile first') styles.
+    Modify as content requires.
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
@@ -492,16 +1063,16 @@ svg {
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
+  /* (-webkit-min-device-pixel-ratio: 1.25), */
   (min-resolution: 1.25dppx),
   (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
 /* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
+    Print styles.
+    Inlined to avoid the additional HTTP request:
+    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
 @media print {
