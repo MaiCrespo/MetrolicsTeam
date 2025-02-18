@@ -90,6 +90,7 @@ p {
 
 .col {
     position: relative;
+    display: grid;
 }
 
 footer {
@@ -106,6 +107,34 @@ footer {
     padding: 1rem;
 }
 
+/* 
+.footer {
+    margin: auto;
+    border-bottom: 150px solid;
+    max-width: 1024px;
+} */
+
+/* 
+.footer-profile {
+  order: ;
+}
+
+.footer-about-us {
+  order: ;
+}
+
+.footer-socials {
+  order: ;
+}
+
+.footer-whats-new {
+  order: ;
+}
+
+.footer-track-us {
+  order: ;
+} */
+
 /* Mobile Layout */
 
 @media screen and (max-width: 624px) {
@@ -114,6 +143,46 @@ footer {
         display: none;
     }
 
+    .s-col-3 {
+        display: grid;
+        /* grid-template-columns: repeat(3, 1fr); */
+    }
+
+    .footer-profile-image {
+      grid-column-start: 1;
+}
+
+    .footer-profile-caption {
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+
+    .footer-profile {
+      order: -1;
+    }
+    
+    /* .footer-track-us-help {
+      order: 0;
+      grid-row-start: 2;
+      grid-column-start: 1;
+    } */
+
+    .footer-track-us {
+      order: 0;
+      grid-row-start: 2;
+      /* grid-column-start: 2;
+      grid-column-end: 2; */
+    }
+
+    .footer-whats-new {
+      order: 1;
+      grid-row: 3;
+    }
+        
+    .background-colour-bar {
+      order: 4;
+      grid-row: 4;
+    }
   }
 
 
@@ -161,7 +230,30 @@ mine ahhh
       grid-column-end: 4;
     }
 
+    .footer-profile {
+      order: 1;
+    }
     
+    .footer-about-us {
+      order: 2;
+    }
+    
+    .footer-socials {
+      order: 3;
+    }
+    
+    .footer-whats-new {
+      order: 4;
+    }
+    
+    .footer-track-us {
+      order: 5;
+    }
+
+    .background-colour-bar {
+      order: 6;
+      grid-row-start: 8;
+    }
 
 }
 
