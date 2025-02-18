@@ -144,10 +144,10 @@ img {
     font-size: var(--font-size-month);
     font-weight: lighter;
     color: var(--color-primary);
-    margin-top: 15;
+    margin-top: 15px;
     position: absolute;
-    top: 13px;
-    bottom: 10px;
+    top: 17px; 
+    bottom: 0px;
     left: 8px;
 }
 
