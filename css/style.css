@@ -187,6 +187,12 @@ footer {
   }
 
 
+  @media screen and (min-width: 624px) and (max-width: 640px){
+    .m-hide {
+      display: none;
+  }
+  }
+
 /* Tablet Layout Medium + Up */
 
 @media screen and (min-width: 640px) {
@@ -203,6 +209,10 @@ footer {
         column-gap: 0.5rem;
         row-gap: 0.5rem;
     }
+
+    /* .m-hide {
+      display: none;
+  } */
 
     .m-col-2 {
         display:grid;
